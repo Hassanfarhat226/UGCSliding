@@ -20,7 +20,10 @@ body, html {
 
 /* Wrapper - Full Width & Height */
 .wrapper {
+  margin-top: 2rem;
   width: 100vw;
+  max-width: 1536px;
+  margin-inline: auto;
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -36,20 +39,18 @@ body, html {
 /* Infinite Scroll Animation */
 @keyframes scrollLeft {
   to {
-    left: -100vw;
+    left: -350px;
   }
 }
 
 .itemLeft {
-  width: 100vw;
-  height: 100vh;
+  width: 350px;
+  height: 100vh; /* Full height for videos */
   border-radius: 10px;
   position: absolute;
   animation-timing-function: linear;
   animation-duration: 60s;
   animation-iteration-count: infinite;
-  background-size: cover;
-  background-position: center;
 }
 
 /* Video Styling - Full Size Like TikTok */
@@ -60,7 +61,33 @@ body, html {
   border-radius: 10px;
 }
 
-/* Responsive Fixes */
+/* Positioning Each Video */
+.itemLeft {
+  left: max(calc(350px * 5), 100%);
+  animation-name: scrollLeft;
+}
+
+.item1 {
+  animation-delay: calc(60s / 5 * (5 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(60s / 5 * (5 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(60s / 5 * (5 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(60s / 5 * (5 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(60s / 5 * (5 - 5) * -1);
+}
+
+/* Mobile Fixes */
 @media (max-width: 768px) {
   .wrapper {
     mask-image: none;
