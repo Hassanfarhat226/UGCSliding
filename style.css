@@ -77,15 +77,3 @@ body {
 .itemLeft:nth-child(5) {
   animation-delay: calc(60s / 8 * (8 - 5) * -1);
 }
-
-.itemLeft:nth-child(6) {
-  animation-delay: calc(60s / 8 * (8 - 6) * -1);
-}
-
-.itemLeft:nth-child(7) {
-  animation-delay: calc(60s / 8 * (8 - 7) * -1);
-}
-
-.itemLeft:nth-child(8) {
-  animation-delay: calc(60s / 8 * (8 - 8) * -1);
-}
