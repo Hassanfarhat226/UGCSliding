@@ -16,7 +16,7 @@ body {
 /* Wrapper - Increase Height to Fit Bigger Videos */
 .wrapper {
   margin-top: 2rem;
-  width: 90%;
+  width: 100%;
   max-width: 1536px;
   margin-inline: auto;
   height: 650px; /* Increase height */
