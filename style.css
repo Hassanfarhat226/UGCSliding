@@ -1,3 +1,4 @@
+/* General Reset */
 *,
 *::before,
 *::after {
@@ -12,6 +13,7 @@ body {
   background-color: #030712;
 }
 
+/* Wrapper */
 .wrapper {
   margin-top: 2rem;
   width: 90%;
@@ -29,6 +31,7 @@ body {
   );
 }
 
+/* Infinite Scroll Animation */
 @keyframes scrollLeft {
   to {
     left: -350px;
@@ -43,72 +46,77 @@ body {
   animation-timing-function: linear;
   animation-duration: 60s;
   animation-iteration-count: infinite;
-  background-size: 350px 175px;
-  background-position: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.item1 {
-  background-video: url("Video 4.mp4");
+/* Video Styling */
+.video-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
 }
-.item2 {
-  background-video: url("Video 5.mp4");
-}
+
+/* Image Backgrounds */
 .item3 {
   background-image: url("Image 3.png");
 }
+
 .item4 {
   background-image: url("Image 4.png");
 }
+
 .item5 {
   background-image: url("Image 5.png");
 }
+
 .item6 {
   background-image: url("Image 6.png");
 }
+
 .item7 {
   background-image: url("Image 7.png");
 }
+
 .item8 {
   background-image: url("Image 7.png");
 }
 
+/* Scroll Positioning */
 .itemLeft {
   left: max(calc(350px * 8), 100%);
   animation-name: scrollLeft;
 }
 
-.item1 {
+.itemLeft:nth-child(1) {
   animation-delay: calc(60s / 8 * (8 - 1) * -1);
 }
 
-.item2 {
+.itemLeft:nth-child(2) {
   animation-delay: calc(60s / 8 * (8 - 2) * -1);
 }
 
-.item3 {
+.itemLeft:nth-child(3) {
   animation-delay: calc(60s / 8 * (8 - 3) * -1);
 }
 
-.item4 {
+.itemLeft:nth-child(4) {
   animation-delay: calc(60s / 8 * (8 - 4) * -1);
 }
 
-.item5 {
+.itemLeft:nth-child(5) {
   animation-delay: calc(60s / 8 * (8 - 5) * -1);
 }
 
-.item6 {
+.itemLeft:nth-child(6) {
   animation-delay: calc(60s / 8 * (8 - 6) * -1);
 }
 
-.item7 {
+.itemLeft:nth-child(7) {
   animation-delay: calc(60s / 8 * (8 - 7) * -1);
 }
 
-.item8 {
+.itemLeft:nth-child(8) {
   animation-delay: calc(60s / 8 * (8 - 8) * -1);
-}
-
-.wrapper:nth-of-type(3) .itemLeft {
-  left: max(calc(350px * 8), 100%);
 }
