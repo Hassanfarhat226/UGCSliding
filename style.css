@@ -58,31 +58,6 @@ body {
   border-radius: 10px;
 }
 
-/* Image Backgrounds */
-.item3 {
-  background-image: url("Image 3.png");
-}
-
-.item4 {
-  background-image: url("Image 4.png");
-}
-
-.item5 {
-  background-image: url("Image 5.png");
-}
-
-.item6 {
-  background-image: url("Image 6.png");
-}
-
-.item7 {
-  background-image: url("Image 7.png");
-}
-
-.item8 {
-  background-image: url("Image 7.png");
-}
-
 /* Scroll Positioning */
 .itemLeft {
   left: max(calc(350px * 8), 100%);
