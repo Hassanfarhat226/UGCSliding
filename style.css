@@ -19,7 +19,7 @@ body {
   width: 90%;
   max-width: 1536px;
   margin-inline: auto;
-  height: 600px; /* Increase height */
+  height: 650px; /* Increase height */
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(
