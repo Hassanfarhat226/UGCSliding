@@ -13,13 +13,13 @@ body {
   background-color: #030712;
 }
 
-/* Wrapper */
+/* Wrapper - Increase Height to Fit Bigger Videos */
 .wrapper {
   margin-top: 2rem;
   width: 90%;
   max-width: 1536px;
   margin-inline: auto;
-  height: 175px;
+  height: 600px; /* Increase height */
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(
@@ -40,8 +40,8 @@ body {
 
 .itemLeft {
   width: 350px;
-  height: 175px;
-  border-radius: 6px;
+  height: 600px; /* Make videos taller */
+  border-radius: 10px;
   position: absolute;
   animation-timing-function: linear;
   animation-duration: 60s;
@@ -50,12 +50,12 @@ body {
   background-position: center;
 }
 
-/* Video Styling */
+/* Video Styling - Full Size Like TikTok */
 .video-item {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 6px;
+  object-fit: cover; /* Ensures full coverage without stretching */
+  border-radius: 10px;
 }
 
 /* Image Backgrounds */
