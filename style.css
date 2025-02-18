@@ -48,10 +48,10 @@ body {
 }
 
 .item1 {
-  background-image: url("Video 4.mp4");
+  background-video: url("Video 4.mp4");
 }
 .item2 {
-  background-image: url("Video 5.mp4");
+  background-video: url("Video 5.mp4");
 }
 .item3 {
   background-image: url("Image 3.png");
