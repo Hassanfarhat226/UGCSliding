@@ -10,24 +10,18 @@
 }
 
 body {
-  background-color: #030712;
+  background-color: #000000;
 }
 
 /* Wrapper - Increase Height to Fit Bigger Videos */
 .wrapper {
   margin-top: 2rem;
-  width: 90%;
+  width: 100%;
   max-width: 1536px;
   margin-inline: auto;
   height: 600px; /* Increase height */
   position: relative;
   overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
   );
 }
 
@@ -56,31 +50,6 @@ body {
   height: 100%;
   object-fit: cover; /* Ensures full coverage without stretching */
   border-radius: 10px;
-}
-
-/* Image Backgrounds */
-.item3 {
-  background-image: url("Image 3.png");
-}
-
-.item4 {
-  background-image: url("Image 4.png");
-}
-
-.item5 {
-  background-image: url("Image 5.png");
-}
-
-.item6 {
-  background-image: url("Image 6.png");
-}
-
-.item7 {
-  background-image: url("Image 7.png");
-}
-
-.item8 {
-  background-image: url("Image 7.png");
 }
 
 /* Scroll Positioning */
