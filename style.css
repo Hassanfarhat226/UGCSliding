@@ -9,17 +9,19 @@
   margin: 0;
 }
 
-body {
-  background-color: #000000;
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #030712;
 }
 
-/* Wrapper - Increase Height to Fit Bigger Videos */
+/* Wrapper - Full Width & Height */
 .wrapper {
-  margin-top: 2rem;
-  width: 100%;
-  max-width: 1536px;
-  margin-inline: auto;
-  height: 650px; /* Increase height */
+  width: 100vw;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(
@@ -34,13 +36,13 @@ body {
 /* Infinite Scroll Animation */
 @keyframes scrollLeft {
   to {
-    left: -350px;
+    left: -100vw;
   }
 }
 
 .itemLeft {
-  width: 350px;
-  height: 600px; /* Make videos taller */
+  width: 100vw;
+  height: 100vh;
   border-radius: 10px;
   position: absolute;
   animation-timing-function: linear;
@@ -54,44 +56,27 @@ body {
 .video-item {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures full coverage without stretching */
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* Scroll Positioning */
-.itemLeft {
-  left: max(calc(350px * 8), 100%);
-  animation-name: scrollLeft;
-}
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .wrapper {
+    mask-image: none;
+    -webkit-mask-image: none;
+    width: 100vw;
+    height: 100vh;
+  }
 
-.itemLeft:nth-child(1) {
-  animation-delay: calc(60s / 8 * (8 - 1) * -1);
-}
+  .itemLeft {
+    width: 100vw;
+    height: 100vh;
+  }
 
-.itemLeft:nth-child(2) {
-  animation-delay: calc(60s / 8 * (8 - 2) * -1);
-}
-
-.itemLeft:nth-child(3) {
-  animation-delay: calc(60s / 8 * (8 - 3) * -1);
-}
-
-.itemLeft:nth-child(4) {
-  animation-delay: calc(60s / 8 * (8 - 4) * -1);
-}
-
-.itemLeft:nth-child(5) {
-  animation-delay: calc(60s / 8 * (8 - 5) * -1);
-}
-
-.itemLeft:nth-child(6) {
-  animation-delay: calc(60s / 8 * (8 - 6) * -1);
-}
-
-.itemLeft:nth-child(7) {
-  animation-delay: calc(60s / 8 * (8 - 7) * -1);
-}
-
-.itemLeft:nth-child(8) {
-  animation-delay: calc(60s / 8 * (8 - 8) * -1);
+  .video-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
