@@ -1,72 +1,43 @@
-/* General Reset */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-}
-
-body {
-  background-color: #000000;
-  overflow-x: hidden; /* Prevents horizontal scrolling */
-}
-
-/* Scrolling Container */
-.scroller {
-  display: flex;
-  width: max-content; /* Allows infinite scrolling effect */
-  animation: scrollLeft 20s linear infinite; /* Adjust speed as needed */
-}
-
-/* Wrapper */
-.wrapper {
-  display: flex;
-  gap: 20px;
-}
-
-/* Infinite Scroll Animation */
-@keyframes scrollLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-/* Video Container */
-.itemLeft {
-  width: 350px;
-  height: 600px;
-  flex-shrink: 0; /* Prevents items from shrinking */
-  border-radius: 10px;
-  position: relative;
-}
-
-/* Video Styling */
-.video-item {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/* === Animation Delays for Staggered Movement === */
-.itemLeft:nth-child(1) {
-  animation-delay: 0s;
-}
-.itemLeft:nth-child(2) {
-  animation-delay: 2s;
-}
-.itemLeft:nth-child(3) {
-  animation-delay: 4s;
-}
-.itemLeft:nth-child(4) {
-  animation-delay: 6s;
-}
-.itemLeft:nth-child(5) {
-  animation-delay: 8s;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinite Scroll</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div class="itemLeft">
+      <video class="video-item" autoplay loop muted playsinline>
+        <source src="Video 4.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="itemLeft">
+      <video class="video-item" autoplay loop muted playsinline>
+        <source src="Video 5.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="itemLeft">
+      <video class="video-item" autoplay loop muted playsinline>
+        <source src="Video 1.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="itemLeft">
+      <video class="video-item" autoplay loop muted playsinline>
+        <source src="Video 2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="itemLeft">
+      <video class="video-item" autoplay loop muted playsinline>
+        <source src="Video 3.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</body>
+</html>
