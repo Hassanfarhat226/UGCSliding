@@ -11,69 +11,62 @@
 
 body {
   background-color: #000000;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
-/* Wrapper - Increase Height to Fit Bigger Videos */
+/* Scrolling Container */
+.scroller {
+  display: flex;
+  width: max-content; /* Allows infinite scrolling effect */
+  animation: scrollLeft 20s linear infinite; /* Adjust speed as needed */
+}
+
+/* Wrapper */
 .wrapper {
-  margin-top: 2rem;
-  width: 100%;
-  max-width: 1536px;
-  margin-inline: auto;
-  height: 600px; /* Increase height */
-  position: relative;
-  overflow: hidden;
-  );
+  display: flex;
+  gap: 20px;
 }
 
 /* Infinite Scroll Animation */
 @keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
   to {
-    left: -350px;
+    transform: translateX(-50%);
   }
 }
 
+/* Video Container */
 .itemLeft {
   width: 350px;
-  height: 600px; /* Make videos taller */
+  height: 600px;
+  flex-shrink: 0; /* Prevents items from shrinking */
   border-radius: 10px;
-  position: absolute;
-  animation-timing-function: linear;
-  animation-duration: 60s;
-  animation-iteration-count: infinite;
-  background-size: cover;
-  background-position: center;
+  position: relative;
 }
 
-/* Video Styling - Full Size Like TikTok */
+/* Video Styling */
 .video-item {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures full coverage without stretching */
+  object-fit: cover;
   border-radius: 10px;
 }
 
-/* Scroll Positioning */
-.itemLeft {
-  left: max(calc(350px * 8), 100%);
-  animation-name: scrollLeft;
-}
-
+/* === Animation Delays for Staggered Movement === */
 .itemLeft:nth-child(1) {
-  animation-delay: calc(60s / 8 * (8 - 1) * -1);
+  animation-delay: 0s;
 }
-
 .itemLeft:nth-child(2) {
-  animation-delay: calc(60s / 8 * (8 - 2) * -1);
+  animation-delay: 2s;
 }
-
 .itemLeft:nth-child(3) {
-  animation-delay: calc(60s / 8 * (8 - 3) * -1);
+  animation-delay: 4s;
 }
-
 .itemLeft:nth-child(4) {
-  animation-delay: calc(60s / 8 * (8 - 4) * -1);
+  animation-delay: 6s;
 }
-
 .itemLeft:nth-child(5) {
-  animation-delay: calc(60s / 8 * (8 - 5) * -1);
+  animation-delay: 8s;
 }
