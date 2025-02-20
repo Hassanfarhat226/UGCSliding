@@ -54,7 +54,7 @@ body {
 
 /* Scroll Positioning */
 .itemLeft {
-  left: max(calc(350px * 8), 100%);
+  left: max(calc(350px * 5), 100%);
   animation-name: scrollLeft;
 }
 
